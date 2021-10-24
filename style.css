@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+}
+
+html,
+body {
+  --black: hsl(240, 6%, 13%);
+  --grey: hsl(240, 9%, 89%); /* variavel para a cor */
+
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  display: grid;
+  place-items: center; /* Centraliza */
+}
+main {
+  background: url(images/background.svg) no-repeat center/cover;
+  width: 100vw;
+  min-height: 812px;
+  height: 100vh;
+}
+.container {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  color: var(--grey);
+}
+
+.avatar {
+  width: 10rem;
+  margin: 11.5rem auto 0;
+  position: relative;
+}
+
+.avatar span {
+  position: absolute;
+  top: -15px;
+  z-index: 1;
+}
+
+.avatar > img {
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover;
+
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+
+  /* imagem em poligono */
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+a {
+  color: var(--grey);
+  text-decoration: none;
+
+  margin-top: 0.25rem;
+
+  display: flex;
+  gap: 0.75rem;
+
+  justify-content: center;
+  align-items: center;
+}
+p {
+  margin-top: 2rem;
+}
+ul {
+  margin-top: 4rem;
+
+  list-style: none;
+  padding: 0;
+
+  display: flex;
+  gap: 0.5rem; /* espaço entre os quadrados */
+  justify-content: center; /* Centraliza */
+}
+.iconsSocial a:hover {
+  transform: scale(1.2); /*zoom o botao ao passar o mouse*/
+  transition: all 0.5s;
+}
+/*
+  transform: translateY(-10px);    Eleva o botao
+  transition: 0.5rem; 
+*/
+
+.iconsSocial img:hover {
+  /*Sombra embaixo do botao ao passar o mouse*/
+  -webkit-box-shadow: -1px 0px 15px 0px #FF008E;
+  box-shadow: -1px 0px 15px 0px #FF008E;
+}
+.gitLink:hover{
+  transform: scale(1.2); /*zoom o botao ao passar o mouse*/
+  transition: all 0.5s;
+  color: #FF008E ;
+}
+
+.selo {  /*Selo rocketSeat rodando*/
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate{
+  from {
+		transform: rotate(0);
+	}
+  to {
+		transform: rotate(360deg);
+	}
+}
+/* ========= MOBILE FIRST =========*/
+
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  body {  /* BackGround */
+    background: url(images/Desktop.svg) no-repeat center/cover;
+    background-color: black;
+  }
+  main {
+    
+    background: url(images/mask.svg)no-repeat center/cover;
+    background-color: black;
+    width: 358px;
+    height: 540px;
+    min-height: 540px;
+  }
+  .container{
+    position: relative;
+    top: -11rem;
+    z-index: 1;
+  }
+  
+  .avatar {
+  width: 10rem;
+  margin: 4.7rem auto 0;
+  position: relative;
+  }
+  .avatar span {
+    position: absolute;
+    top: -15px;
+    z-index: 1;
+  }
+  ul {
+    margin-top: 2.5rem;
+  }
+  .faixa {
+    background: url('images/faixa.svg') no-repeat;
+    position: relative;
+    top: -8.6rem;
+    z-index: 1;
+    height: 10.6rem;
+    width: 5.3rem;
+    left: 8.6rem;
+  }
+  main {
+    animation: go-back 2s;
+  }
+  @keyframes go-back {
+    0% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+  }
+  @keyframes animation{
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}

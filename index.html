@@ -1,0 +1,88 @@
+<!--
+  Comentario
+
+  HTML : 
+  HyperText = Texto com links
+  Markup  = MArcação/Tags
+  Language = Regras de uma linguagem
+-->
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <!--Inicio-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bruno Silva - DoWhile 2021</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https: //fonts.googleapis.com/css2? família = Roboto: ital, wght @ 1.400; 1.700 & display = swap "
+      rel=" stylesheet "
+    />
+  </head>
+  <body>
+    <main class="cracha">
+      <div class="faixa"></div>
+      <!--Container-->
+      <div class="container">
+        <!--criar uma caixa-->
+        <div class="avatar">
+          <span class="selo">
+            <img src="images/build.svg" alt="Selo Rocketseat" />
+          </span>
+          <img
+            src="http://lorempixel.com/185/185/people/"
+            alt="Imagem pessoal"
+            id="UserImage"
+          />
+        </div>
+        <h1 id="userName">Bruno</h1>
+        <!-- Texto grande-->
+        <a
+          id="userLinkGitHub"
+          class="gitLink"
+          href="https://github.com/BrS1lva"
+          target="_blank"
+        >
+          <img src="images/github.svg" alt="icone github" />
+          <span id="userLogin">BrS1lva</span>
+        </a>
+        <!-- Hyper link -->
+        <p id="userBio">A programmer in search of knowledge</p>
+        <ul id="socialLinks" class="iconsSocial">
+          <li class="youtube">
+            <!-- target="_blank"  abre o lik em um novo separador -->
+            <a href="https://www.youtube.com/" target="_blank">
+              <img src="images/youtube.svg" alt="icone youtube" />
+            </a>
+          </li>
+          <li class="facebook">
+            <a href="https://www.facebook.com/" target="_blank">
+              <img src="images/facebook.svg" alt="icone facebook" />
+            </a>
+            <!--Colocar link do FB -->
+          </li>
+          <li class="instagram">
+            <a href="https://www.instagram.com/" target="_blank">
+              <img src="images/instagram.svg" alt="icone instagram" />
+            </a>
+          </li>
+          <li class="twitter">
+            <a href="https://twitter.com/" target="_blank">
+              <img src="images/twitter.svg" alt="icone twitter" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <script src="main.js"></script>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelector("main"), {
+        max: 7,
+        speed: 300
+      })
+    </script>
+  </body>
+</html>
