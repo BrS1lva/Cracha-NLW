@@ -150,7 +150,7 @@ ul {
     margin-top: 2.5rem;
   }
   .faixa {
-    background: url('images/faixa.svg') no-repeat;
+    background: url(images/faixa.svg) no-repeat;
     position: relative;
     top: -8.6rem;
     z-index: 1;
